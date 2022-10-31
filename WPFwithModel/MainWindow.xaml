@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPFwithModel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFwithModel"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Effect>
+                    <DropShadowEffect/>
+                </StackPanel.Effect>
+                <TextBox x:Name="tbName" Text="{Binding Path = Name, Mode =Default}"
+                         
+                         Width="250"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label> Beans in Brewer </Label>
+                <TextBox x:Name="tbBeans" Text="{Binding Path = brewer, Mode =TwoWay}"
+                         Width="100"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Cups Brewed</Label>
+                <TextBox x:Name="tbCups" Text="{Binding Path = cups, Mode =TwoWay}"
+                         Width="30"/>
+            </StackPanel>
+            <Button x:Name="btnAddBeans" Width="62" Click="btnAddBeans_Click">Add Beans</Button>
+            <Button x:Name="btnBrew" Width="62" Click="btnBrew_Click">Brew Cup</Button>
+        </StackPanel>    
+    </Grid>
+</Window>
